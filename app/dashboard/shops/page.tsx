@@ -33,7 +33,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Addshop from "@/components/admins/shop/ShopForm";
 import { Separator } from "@/components/ui/separator";
 import { ShopFilterType, ShopType } from "@/type/shops.model";
 
@@ -51,6 +50,11 @@ import FilterBar, {
 } from "@/components/commens/filter-bar/FilterBar";
 import { reportsService } from "@/lib/services/reportService";
 import toast from "react-hot-toast";
+import dynamic from "next/dynamic";
+
+const Addshop = dynamic(() => import("@/components/admins/shop/ShopForm"), {
+  ssr: false,
+});
 
 export default function Page() {
   const { isAuthenticated } = useAuth();
