@@ -1,0 +1,214 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/dashboard/orders/[orderId]",
+      "regex": "^/dashboard/orders/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPorderId": "nxtPorderId"
+      },
+      "namedRegex": "^/dashboard/orders/(?<nxtPorderId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[restaurantId]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPrestaurantId": "nxtPrestaurantId"
+      },
+      "namedRegex": "^/(?<nxtPrestaurantId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[restaurantId]/cart",
+      "regex": "^/([^/]+?)/cart(?:/)?$",
+      "routeKeys": {
+        "nxtPrestaurantId": "nxtPrestaurantId"
+      },
+      "namedRegex": "^/(?<nxtPrestaurantId>[^/]+?)/cart(?:/)?$"
+    },
+    {
+      "page": "/[restaurantId]/chat",
+      "regex": "^/([^/]+?)/chat(?:/)?$",
+      "routeKeys": {
+        "nxtPrestaurantId": "nxtPrestaurantId"
+      },
+      "namedRegex": "^/(?<nxtPrestaurantId>[^/]+?)/chat(?:/)?$"
+    },
+    {
+      "page": "/[restaurantId]/orderlist",
+      "regex": "^/([^/]+?)/orderlist(?:/)?$",
+      "routeKeys": {
+        "nxtPrestaurantId": "nxtPrestaurantId"
+      },
+      "namedRegex": "^/(?<nxtPrestaurantId>[^/]+?)/orderlist(?:/)?$"
+    },
+    {
+      "page": "/[restaurantId]/orderlist/[orderId]",
+      "regex": "^/([^/]+?)/orderlist/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPrestaurantId": "nxtPrestaurantId",
+        "nxtPorderId": "nxtPorderId"
+      },
+      "namedRegex": "^/(?<nxtPrestaurantId>[^/]+?)/orderlist/(?<nxtPorderId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[restaurantId]/[menuId]",
+      "regex": "^/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPrestaurantId": "nxtPrestaurantId",
+        "nxtPmenuId": "nxtPmenuId"
+      },
+      "namedRegex": "^/(?<nxtPrestaurantId>[^/]+?)/(?<nxtPmenuId>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/confrimation",
+      "regex": "^/confrimation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/confrimation(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard/categories",
+      "regex": "^/dashboard/categories(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/categories(?:/)?$"
+    },
+    {
+      "page": "/dashboard/chats",
+      "regex": "^/dashboard/chats(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/chats(?:/)?$"
+    },
+    {
+      "page": "/dashboard/dining-tables",
+      "regex": "^/dashboard/dining\\-tables(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/dining\\-tables(?:/)?$"
+    },
+    {
+      "page": "/dashboard/feedbacks",
+      "regex": "^/dashboard/feedbacks(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/feedbacks(?:/)?$"
+    },
+    {
+      "page": "/dashboard/menu",
+      "regex": "^/dashboard/menu(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/menu(?:/)?$"
+    },
+    {
+      "page": "/dashboard/orders",
+      "regex": "^/dashboard/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/orders(?:/)?$"
+    },
+    {
+      "page": "/dashboard/organizations",
+      "regex": "^/dashboard/organizations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/organizations(?:/)?$"
+    },
+    {
+      "page": "/dashboard/shops",
+      "regex": "^/dashboard/shops(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/shops(?:/)?$"
+    },
+    {
+      "page": "/dashboard/users",
+      "regex": "^/dashboard/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/users(?:/)?$"
+    },
+    {
+      "page": "/emailverify",
+      "regex": "^/emailverify(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/emailverify(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/forgetpassword",
+      "regex": "^/forgetpassword(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/forgetpassword(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/reset-password",
+      "regex": "^/reset\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reset\\-password(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
