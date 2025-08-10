@@ -26,4 +26,4 @@ export enum  MESSAGE_SENDER{
       USER='user',
       SYSTEM = 'system'
 }
-export const host = process.env.NEXT_PUBLIC_API_STATIC
+export const host = process.env.NEXT_PUBLIC_API_STATIC || 'https://restaurantsaasmenuimage.s3.amazonaws.com'
