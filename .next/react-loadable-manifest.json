@@ -1,4 +1,11 @@
 {
+  "app/dashboard/shops/page.tsx -> @/components/admins/shop/ShopForm": {
+    "id": 3160,
+    "files": [
+      "static/chunks/d0deef33.322f00ff70f48287.js",
+      "static/chunks/3160.102d7000745417e4.js"
+    ]
+  },
   "components/admins/dashboard/LineBarDashboard.tsx -> ./LineBar": {
     "id": 3442,
     "files": [
