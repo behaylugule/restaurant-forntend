@@ -7,8 +7,6 @@ export const USER_ROLE_OPTIONS = [
   { value: USER_ROLE.CUSTOMER, label: 'Customer' },
   { value: USER_ROLE.USER, label: 'User' },
 ];
-
-
 export const ORDER_STATUS_OPTION = [
   {value: ORDER_STATUS.PENDING, label:'pending'},
   {value:ORDER_STATUS.PROCESSING,label:'processing'},
