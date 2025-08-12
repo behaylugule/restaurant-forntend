@@ -27,7 +27,7 @@ export default function ChatRoomPage() {
 
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `ws://restaurantsaas.duckdns.org/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
+      `wss://restaurantsaas.duckdns.org/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
     );
 
     console.log(socketRef.current);

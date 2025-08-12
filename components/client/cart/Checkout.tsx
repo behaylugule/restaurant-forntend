@@ -51,7 +51,7 @@ export default function Checkout() {
 
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `ws://restaurantsaas.duckdns.org/ws/orders/${params.restaurantId?.toLocaleString()}/?token=${accessToken}`,
+      `wss://restaurantsaas.duckdns.org/ws/orders/${params.restaurantId?.toLocaleString()}/?token=${accessToken}`,
     );
     console.log(socketRef.current);
     socketRef.current.onmessage = (event) => {
