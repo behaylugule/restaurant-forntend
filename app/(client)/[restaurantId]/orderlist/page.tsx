@@ -20,7 +20,7 @@ export default function Page() {
     if (!params.restaurantId) return;
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `ws://13.50.63.195/ws/orders/${params.restaurantId.toLocaleString()}/?token=${accessToken}`,
+      `ws://restaurantsaas.duckdns.org/ws/orders/${params.restaurantId.toLocaleString()}/?token=${accessToken}`,
     );
     socketRef.current.onmessage = (event) => {
       const data = JSON.parse(event.data);

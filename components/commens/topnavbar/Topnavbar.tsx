@@ -40,7 +40,7 @@ export default function Topnavbar() {
     const accessToken = localStorage.getItem("access");
 
     socketRef.current = new WebSocket(
-      `ws://13.50.63.195/ws/reports/${user.id}/?token=${accessToken}`,
+      `ws://restaurantsaas.duckdns.org/ws/reports/${user.id}/?token=${accessToken}`,
     );
     console.log("WebSocket created");
 
