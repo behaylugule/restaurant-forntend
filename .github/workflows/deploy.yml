@@ -1,0 +1,43 @@
+name: Deploy next.js to EC2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ceckout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install dependencies
+        run: npm install
+      -
+
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: Deploy to EC2
+        uses: appleboy/scp-actions@v0.1.4
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER}}
+          key: ${{ secrets.EC2_KEY }}
+          source: "./"
+          target: "/home/ubuntu/restaurant-forntend"
+          overwrite: true
+
+      - name: Restart Next.js Service
+        users: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.EC2_HOST}}
+          username: ${{ secrets.EC2_USER}}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            cd /home/ubuntu/restaurant-forntend
+            pm2 reload nextjs
