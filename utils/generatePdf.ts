@@ -6,7 +6,6 @@ export const generatePdf = (values: any) => {
         for (let i = 0; i < binaryLen; i++) {
             bytes[i] = binaryString.charCodeAt(i);
         }
-
         const blob = new Blob([bytes], { type: 'application/pdf' });
         const url = URL.createObjectURL(blob);
         window.open(url);
