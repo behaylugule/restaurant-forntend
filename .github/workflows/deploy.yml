@@ -33,7 +33,7 @@ jobs:
           overwrite: true
 
       - name: Restart Next.js Service
-        users: appleboy/ssh-action@v0.1.6
+        uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.EC2_HOST}}
           username: ${{ secrets.EC2_USER}}
