@@ -27,7 +27,7 @@ export default function ChatRoomPage() {
 
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `ws://13.48.55.184/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
+      `ws://13.50.63.195/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
     );
 
     console.log(socketRef.current);

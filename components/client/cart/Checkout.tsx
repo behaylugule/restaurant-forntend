@@ -51,7 +51,7 @@ export default function Checkout() {
 
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `ws://13.48.55.184/ws/orders/${params.restaurantId?.toLocaleString()}/?token=${accessToken}`,
+      `ws://13.50.63.195/ws/orders/${params.restaurantId?.toLocaleString()}/?token=${accessToken}`,
     );
     console.log(socketRef.current);
     socketRef.current.onmessage = (event) => {
