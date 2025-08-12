@@ -21,7 +21,6 @@ export enum ORDER_STATUS{
     COMPLETED ='completed',
     CANCLED ='cancled',
 }
-
 export enum  MESSAGE_SENDER{
       USER='user',
       SYSTEM = 'system'
