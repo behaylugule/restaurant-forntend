@@ -39,4 +39,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/restaurant-forntend
-            pm2 reload nextjs
+            pm2 restart nextjs-app
