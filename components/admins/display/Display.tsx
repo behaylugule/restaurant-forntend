@@ -29,6 +29,7 @@ export default function Display() {
     socketRef.current.onmessage = (event) => {
       console.log(event);
       const data = JSON.parse(event.data);
+      console.log("After CI/CD config");
       console.log(data);
 
       if (data.status == ORDER_STATUS.PROCESSING) {
