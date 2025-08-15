@@ -24,7 +24,7 @@ export default function Display() {
     if (!user && !user?.shop) return;
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `wss://restaurantsaas.duckdns.org/ws/orders/${user.shop}/?token=${accessToken}`,
+      `ws://restaurantsaas-alb-2050189553.eu-north-1.elb.amazonaws.com/ws/orders/${user.shop}/?token=${accessToken}`,
     );
     socketRef.current.onmessage = (event) => {
       console.log(event);

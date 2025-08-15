@@ -24,7 +24,7 @@ export default function MessageList({ chatRoomDetail }: PropsTypes) {
 
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `wss://restaurantsaas.duckdns.org/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
+      `ws://restaurantsaas-alb-2050189553.eu-north-1.elb.amazonaws.com/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
     );
 
     socketRef.current.onmessage = (event) => {
