@@ -40,3 +40,16 @@ jobs:
           script: |
             cd /home/ubuntu/restaurant-forntend
             pm2 restart nextjs-app
+
+      - name: Deploy to second instance
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.EC2_HOST_2}}
+          username: ${{ secrets.EC2_USER}}
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
+          script: |
+            cd /home/ubuntu/restaurant-forntend
+            git pull origin main 
+            npm install
+            npm run build
+            pm2 restart nextjs-app
