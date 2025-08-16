@@ -39,7 +39,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/ubuntu/restaurant-forntend
-            pm2 restart nextjs-app
+            pm2 restart nextjs
 
       - name: Deploy to second instance
         uses: appleboy/scp-action@v0.1.4
@@ -52,4 +52,4 @@ jobs:
             git pull origin main 
             npm install
             npm run build
-            pm2 restart nextjs-app
+            pm2 restart nextjs
