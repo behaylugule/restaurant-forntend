@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       },
       {
       protocol: 'https',
-      hostname: 'restaurantsaasmenuimage.s3.amazonaws.com',
+      hostname: 'd36lcv4gslu2wd.cloudfront.net',
       port: '',
       pathname: '/**',
     },
