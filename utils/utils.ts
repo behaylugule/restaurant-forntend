@@ -28,4 +28,4 @@ export enum  MESSAGE_SENDER{
       USER='user',
       SYSTEM = 'system'
 }
-export const host = process.env.NEXT_PUBLIC_API_STATIC || 'https://restaurantsaasmenuimage.s3.amazonaws.com'
+export const host = process.env.NEXT_PUBLIC_API_STATIC || 'https://d36lcv4gslu2wd.cloudfront.net'
