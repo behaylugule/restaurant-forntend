@@ -42,7 +42,7 @@ jobs:
             pm2 restart nextjs
 
       - name: Deploy to second instance
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.EC2_HOST_2}}
           username: ${{ secrets.EC2_USER}}
