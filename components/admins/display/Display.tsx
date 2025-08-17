@@ -24,7 +24,7 @@ export default function Display() {
     if (!user && !user?.shop) return;
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `ws://restaurantsaas.notestaking.link/ws/orders/${user.shop}/?token=${accessToken}`,
+      `wss://restaurantsaas.notestaking.link/ws/orders/${user.shop}/?token=${accessToken}`,
     );
     socketRef.current.onmessage = (event) => {
       console.log(event);
