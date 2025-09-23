@@ -53,26 +53,26 @@ const menuService = {
     getMuenubyRestorantId
 };
 async function getMenus(data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get('/menu/', {
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get('/menu/menu/', {
         params: {
             ...data
         }
     });
 }
 async function getMenu(id) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/menu/".concat(id, "/"));
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/menu/menu/".concat(id, "/"));
 }
 async function addMenu(data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post('/menu/', data);
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post('/menu/menu/', data);
 }
 async function updateMenu(data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].patch("/menu/".concat(data.id, "/"), data);
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].patch("/menu/menu/".concat(data.id, "/"), data);
 }
 async function deleteMenu(id) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].delete("/menu/".concat(id, "/"));
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].delete("/menu/menu/".concat(id, "/"));
 }
 async function getMuenubyRestorantId(data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/client/menus/".concat(data.id), {
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/menu/client/menus/".concat(data.id), {
         params: {
             category_id: data.category_id,
             page: data.page,
@@ -104,11 +104,11 @@ const categoryService = {
     getMenuCategoriesForClient
 };
 async function createCategory(data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post('/categories/', data);
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post('/menu/categories/', data);
 }
 async function getCategories(param) {
     let { page, page_size, search = '' } = param;
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get('/categories/', {
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get('/menu/categories/', {
         params: {
             page,
             search,
@@ -117,16 +117,16 @@ async function getCategories(param) {
     });
 }
 async function getCategory(id) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/categories/".concat(id, "/"));
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/menu/categories/".concat(id, "/"));
 }
 async function updateCategory(id, data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].patch("/categories/".concat(id, "/"), data);
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].patch("/menu/categories/".concat(id, "/"), data);
 }
 async function deleteCategory(id) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].delete("/categories/".concat(id, "/"));
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].delete("/menu/categories/".concat(id, "/"));
 }
 async function getMenuCategoriesForClient(data) {
-    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/client/categories/".concat(data.id), {
+    return await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$axios$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].get("/menu/client/categories/".concat(data.id), {
         params: {
             page: data.page,
             search: data.search,

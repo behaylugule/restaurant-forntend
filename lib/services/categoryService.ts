@@ -11,26 +11,26 @@ export const categoryService ={
     getMenuCategoriesForClient
 }
 async function createCategory(data:CategoryModel) {
-    return await axios.post('/categories/',data)  
+    return await axios.post('/menu/categories/',data)  
 }
 
 async function getCategories({page,page_size,search=''}:{page:number,page_size:number,search:string}) {
-    return await axios.get('/categories/',{params:{page,search,page_size}})
+    return await axios.get('/menu/categories/',{params:{page,search,page_size}})
 }
 
 async function getCategory(id:string){
-    return await axios.get(`/categories/${id}/`)
+    return await axios.get(`/menu/categories/${id}/`)
 }
 async function updateCategory(id:string,data:CategoryModel){
-    return await axios.patch(`/categories/${id}/`,data)
+    return await axios.patch(`/menu/categories/${id}/`,data)
 }
 
 async function deleteCategory(id:string){
-    return await axios.delete(`/categories/${id}/`)
+    return await axios.delete(`/menu/categories/${id}/`)
 }
 
 async function getMenuCategoriesForClient(data:{id:string,page:number,page_size:number,search:string}){
-  return await axios.get(`/client/categories/${data.id}`,
+  return await axios.get(`/menu/client/categories/${data.id}`,
     {
         params:{
             page:data.page,
