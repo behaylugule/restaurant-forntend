@@ -24,7 +24,7 @@ export default function MessageList({ chatRoomDetail }: PropsTypes) {
 
     const accessToken = localStorage.getItem("access");
     socketRef.current = new WebSocket(
-      `wss://restaurantsaas.notestaking.link/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
+      `ws://localhost:8000/ws/chat/${chatRoomDetail.id}/?token=${accessToken}`,
     );
 
     socketRef.current.onmessage = (event) => {

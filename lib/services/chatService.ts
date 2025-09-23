@@ -7,13 +7,13 @@ export const chatService =  {
 }
 
 async function getMessages(data:{page:number,page_size?:number,search?:string, room_id?:string}){
-    return axios.get('/messages/',{params:{
+    return axios.get('/chat/messages/',{params:{
         ...data
     }})
 }
 
 async function getChatRooms(data:{page:number,page_size?:number, search?:string,shop_id?:string}){
-  return axios.get('/chat-rooms/',{
+  return axios.get('/chat/rooms/',{
     params:{
       ...data
     }

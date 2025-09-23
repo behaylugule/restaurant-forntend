@@ -1,0 +1,10 @@
+{
+  "[project]/components/admins/dashboard/LineBar.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/admins/dashboard/LineBar.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_f0bf69d5._.js",
+      "static/chunks/components_admins_dashboard_LineBar_tsx_844a92ac._.js",
+      "static/chunks/components_admins_dashboard_LineBar_tsx_9e906ca4._.js"
+    ]
+  }
+}
