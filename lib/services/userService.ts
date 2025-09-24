@@ -13,7 +13,7 @@ export const userService = {
     updateProfile
 }
  function registerUser (userData:any){
-    return  axios.post('/register/',userData)
+    return  axios.post('/auth/register/',userData)
    
 }
 
@@ -23,15 +23,15 @@ async function login (data:{username:string , password:string}){
 }
 
 async function getCurrentUser(){
-    return await axios.get('/me/')
+    return await axios.get('/auth/me/')
 }
 
 async function changePassword(data:ChangePasswordType){
-    return await axios.put('/change-password/',data)
+    return await axios.put('/auth/change-password/',data)
 }
 
 async function getUsers(data:any){
-    return await axios.get('/users/',{
+    return await axios.get('/auth/users/',{
         params:{
             ...data
         }
@@ -39,15 +39,15 @@ async function getUsers(data:any){
 }
 
 async function forgetPassword(email:string){
-    return await axios.post('/password-reset/',{email})
+    return await axios.post('/auth/password-reset/',{email})
 }
 
 async function resetPassword(data:{password:string, token:string}){
-    return await axios.post(`/password-reset/confirm/?token=${data.token}` ,data)
+    return await axios.post(`/auth/password-reset/confirm/?token=${data.token}` ,data)
 }
 
 async function updateProfile(data:User){
-    return await axios.patch(`/update-profile/${data.id}/`,data)
+    return await axios.patch(`/auth/update-profile/${data.id}/`,data)
 }
 
 

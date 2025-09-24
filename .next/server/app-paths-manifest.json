@@ -1,13 +1,7 @@
 {
-  "/(client)/[restaurantId]/[menuId]/page": "app/(client)/[restaurantId]/[menuId]/page.js",
-  "/(client)/[restaurantId]/chat/page": "app/(client)/[restaurantId]/chat/page.js",
-  "/(client)/[restaurantId]/page": "app/(client)/[restaurantId]/page.js",
-  "/dashboard/categories/page": "app/dashboard/categories/page.js",
-  "/dashboard/chats/page": "app/dashboard/chats/page.js",
-  "/dashboard/feedbacks/page": "app/dashboard/feedbacks/page.js",
-  "/dashboard/menu/page": "app/dashboard/menu/page.js",
-  "/dashboard/orders/page": "app/dashboard/orders/page.js",
+  "/dashboard/organizations/page": "app/dashboard/organizations/page.js",
   "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/users/page": "app/dashboard/users/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js"
