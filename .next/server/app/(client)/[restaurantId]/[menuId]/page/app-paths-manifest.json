@@ -1,3 +1,0 @@
-{
-  "/(client)/[restaurantId]/[menuId]/page": "app/(client)/[restaurantId]/[menuId]/page.js"
-}
