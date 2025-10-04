@@ -1,4 +1,11 @@
 {
+  "/(client)/[restaurantId]/chat/page": "app/(client)/[restaurantId]/chat/page.js",
+  "/(client)/[restaurantId]/orderlist/page": "app/(client)/[restaurantId]/orderlist/page.js",
+  "/(client)/[restaurantId]/page": "app/(client)/[restaurantId]/page.js",
+  "/dashboard/categories/page": "app/dashboard/categories/page.js",
+  "/dashboard/menu/page": "app/dashboard/menu/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js"
 }

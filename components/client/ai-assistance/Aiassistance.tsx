@@ -1,4 +1,5 @@
 "use client";
+import { useParams } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 export default function AIAssistance() {
@@ -8,11 +9,14 @@ export default function AIAssistance() {
   const [input, setInput] = useState("");
   let socket: WebSocket | null = null;
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
+  const params = useParams();
+  const accessToken = localStorage.getItem("access");
   const sendMessage = () => {
     if (!input.trim()) return;
     if (!socket || socket.readyState !== WebSocket.OPEN) {
-      socket = new WebSocket("ws://localhost:8000/ws/chat-rag/");
+      socket = new WebSocket(
+        `ws://localhost:8000/ws/chat-rag/${params.restaurantId?.toLocaleString()}/?token=${accessToken}`,
+      );
       socket.onmessage = (event) => {
         const data = JSON.parse(event.data);
         if (data.delta) {
