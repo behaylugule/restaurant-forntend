@@ -1,6 +1,37 @@
 {
   "app": {
-    "[project]/app/page": []
+    "[project]/app/(client)/[restaurantId]/chat/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/(client)/[restaurantId]/orderlist/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/(client)/[restaurantId]/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/dashboard/categories/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/dashboard/menu/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/dashboard/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/login/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/b0a57561b6cb5495-s.p.1a6fa3e1.woff2",
+      "static/media/8ee3a1ba4ed5baee-s.p.be19f591.woff2"
+    ]
   },
   "appUsingSizeAdjust": true,
   "pages": {},
