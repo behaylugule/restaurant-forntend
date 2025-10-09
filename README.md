@@ -14,7 +14,6 @@ A modern, full-featured restaurant management system built with Next.js 15, Type
 - **Chat System**: Customer support and communication
 - **Feedback Management**: Collect and analyze customer feedback
 - **Reports & Analytics**: Comprehensive business insights
-
 ### Client Features
 - **Restaurant Discovery**: Browse restaurants by location
 - **Menu Browsing**: View restaurant menus with categories and items
