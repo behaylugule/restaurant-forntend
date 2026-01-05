@@ -2,6 +2,8 @@
 
 A modern, full-featured restaurant management system built with Next.js 15, TypeScript, and Tailwind CSS. This application provides both admin dashboard functionality for restaurant management and client-facing features for customers.
 
+
+
 ## 🚀 Features
 
 ### Admin Dashboard
